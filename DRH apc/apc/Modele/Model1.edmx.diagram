@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4747496b3a264a7c86c3634367863bd0" Name="Diagram1" ZoomLevel="57" >
+        <EntityTypeShape EntityType="Model1.employ" Width="2.375" PointX="6.25" PointY="2.625" FillColor="Red" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.doc_vacance" Width="1.5" PointX="13.625" PointY="0.5" FillColor="Green" />
+        <EntityTypeShape EntityType="Model1.rotba" Width="2" PointX="0.625" PointY="3.125" FillColor="Teal" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.doc_promotion" Width="1.875" PointX="3.25" PointY="5" FillColor="Yellow" />
+        <EntityTypeShape EntityType="Model1.doc_ta9yim" Width="1.5" PointX="16.125" PointY="0.5" FillColor="Fuchsia" />
+        <EntityTypeShape EntityType="Model1.doc_mo7asaba" Width="1.5" PointX="10.5" PointY="3.375" FillColor="64, 64, 64" />
+        <EntityTypeShape EntityType="Model1.doc_7araka" Width="2" PointX="10.875" PointY="6.875" FillColor="128, 64, 64" />
+        <EntityTypeShape EntityType="Model1.doc_displine" Width="1.5" PointX="14.25" PointY="6.25" FillColor="Orange" />
+        <EntityTypeShape EntityType="Model1.doc_vacane_plus" Width="1.875" PointX="12.5" PointY="9.75" FillColor="Olive" />
+        <EntityTypeShape EntityType="Model1.doc_morasalt_idariya" Width="1.875" PointX="12.25" PointY="12.75" FillColor="128, 64, 0" />
+        <AssociationConnector Association="Model1.employdoc_vacance" />
+        <AssociationConnector Association="Model1.employdoc_promotion" />
+        <AssociationConnector Association="Model1.employdoc_ta9yim" />
+        <AssociationConnector Association="Model1.employdoc_displine" />
+        <AssociationConnector Association="Model1.employdoc_7araka" />
+        <AssociationConnector Association="Model1.employdoc_vacane_plus" />
+        <AssociationConnector Association="Model1.employdoc_morasalt_idariya" />
+        <AssociationConnector Association="Model1.employdoc_mo7asaba" />
+        <EntityTypeShape EntityType="Model1.branche" Width="1.5" PointX="1.875" PointY="0.5" FillColor="Maroon" />
+        <AssociationConnector Association="Model1.rotbaemploy" />
+        <AssociationConnector Association="Model1.brancheemploy" />
+        <AssociationConnector Association="Model1.brancherotba" />
+        <EntityTypeShape EntityType="Model1.doc2_chngmt_daraja" Width="1.75" PointX="0.625" PointY="6.25" FillColor="RoyalBlue" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.doc2_chngmnt_delgation" Width="2" PointX="0.5" PointY="8.625" FillColor="RoyalBlue" />
+        <EntityTypeShape EntityType="Model1.doc2_chngmnt_poste" Width="2.125" PointX="0.625" PointY="11.5" FillColor="RoyalBlue" />
+        <AssociationConnector Association="Model1.employdoc2_chngmnt_poste" />
+        <AssociationConnector Association="Model1.employdoc2_chngmt_daraja" />
+        <AssociationConnector Association="Model1.employdoc2_chngmnt_delgation" />
+        <EntityTypeShape EntityType="Model1.doc2_charge_poste" Width="2.875" PointX="0.625" PointY="14.375" FillColor="RoyalBlue" />
+        <AssociationConnector Association="Model1.employdoc2_charge_poste" />
+        <EntityTypeShape EntityType="Model1.apc_annex_catgr" Width="2.125" PointX="9.25" PointY="14.375" FillColor="64, 0, 64" />
+        <EntityTypeShape EntityType="Model1.apc_annex_catgr_detail" Width="2.375" PointX="12.125" PointY="16.25" FillColor="64, 0, 64" />
+        <AssociationConnector Association="Model1.apc_annex_catgrapc_annex_catgr_detail" />
+        <AssociationConnector Association="Model1.apc_annex_catgremploy" />
+        <AssociationConnector Association="Model1.apc_annex_catgr_detailemploy" />
+        <AssociationConnector Association="Model1.apc_annex_catgrdoc2_charge_poste" />
+        <AssociationConnector Association="Model1.apc_annex_catgr_detaildoc2_charge_poste" />
+        <AssociationConnector Association="Model1.rotbadoc_promotion" />
+        <EntityTypeShape EntityType="Model1.login" Width="1.5" PointX="10" PointY="0.5" FillColor="Black" IsExpanded="true" />
+        <AssociationConnector Association="Model1.loginemploy" />
+        <EntityTypeShape EntityType="Model1.lieu_nominaiton" Width="2.875" PointX="3.625" PointY="18.625" FillColor="MediumBlue" />
+        <AssociationConnector Association="Model1.employlieu_nominaiton" />
+        <AssociationConnector Association="Model1.apc_annex_catgrlieu_nominaiton" />
+        <AssociationConnector Association="Model1.apc_annex_catgr_detaillieu_nominaiton" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

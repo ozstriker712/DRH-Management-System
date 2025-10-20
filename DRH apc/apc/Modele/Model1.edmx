@@ -1,0 +1,1665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="employSet" EntityType="Model1.Store.employSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="doc_vacanceSet" EntityType="Model1.Store.doc_vacanceSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="rotbaSet" EntityType="Model1.Store.rotbaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="doc_promotionSet" EntityType="Model1.Store.doc_promotionSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="doc_ta9yimSet" EntityType="Model1.Store.doc_ta9yimSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="doc_mo7asabaSet" EntityType="Model1.Store.doc_mo7asabaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="doc_7arakaSet" EntityType="Model1.Store.doc_7arakaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="doc_displineSet" EntityType="Model1.Store.doc_displineSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="doc_vacane_plusSet" EntityType="Model1.Store.doc_vacane_plusSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="doc_morasalt_idariyaSet" EntityType="Model1.Store.doc_morasalt_idariyaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="brancheSet" EntityType="Model1.Store.brancheSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="doc2_chngmt_darajaSet" EntityType="Model1.Store.doc2_chngmt_darajaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="doc2_chngmnt_delgationSet" EntityType="Model1.Store.doc2_chngmnt_delgationSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="doc2_chngmnt_posteSet" EntityType="Model1.Store.doc2_chngmnt_posteSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="doc2_charge_poste" EntityType="Model1.Store.doc2_charge_poste" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="apc_annex_catgr" EntityType="Model1.Store.apc_annex_catgr" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="apc_annex_catgr_detail" EntityType="Model1.Store.apc_annex_catgr_detail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="logins" EntityType="Model1.Store.logins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lieu_nominaiton" EntityType="Model1.Store.lieu_nominaiton" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="employdoc_vacance" Association="Model1.Store.employdoc_vacance">
+      <End Role="employ" EntitySet="employSet" />
+      <End Role="doc_vacance" EntitySet="doc_vacanceSet" />
+    </AssociationSet>
+    <AssociationSet Name="employdoc_promotion" Association="Model1.Store.employdoc_promotion">
+      <End Role="employ" EntitySet="employSet" />
+      <End Role="doc_promotion" EntitySet="doc_promotionSet" />
+    </AssociationSet>
+    <AssociationSet Name="employdoc_ta9yim" Association="Model1.Store.employdoc_ta9yim">
+      <End Role="employ" EntitySet="employSet" />
+      <End Role="doc_ta9yim" EntitySet="doc_ta9yimSet" />
+    </AssociationSet>
+    <AssociationSet Name="employdoc_displine" Association="Model1.Store.employdoc_displine">
+      <End Role="employ" EntitySet="employSet" />
+      <End Role="doc_displine" EntitySet="doc_displineSet" />
+    </AssociationSet>
+    <AssociationSet Name="employdoc_7araka" Association="Model1.Store.employdoc_7araka">
+      <End Role="employ" EntitySet="employSet" />
+      <End Role="doc_7araka" EntitySet="doc_7arakaSet" />
+    </AssociationSet>
+    <AssociationSet Name="employdoc_vacane_plus" Association="Model1.Store.employdoc_vacane_plus">
+      <End Role="employ" EntitySet="employSet" />
+      <End Role="doc_vacane_plus" EntitySet="doc_vacane_plusSet" />
+    </AssociationSet>
+    <AssociationSet Name="employdoc_morasalt_idariya" Association="Model1.Store.employdoc_morasalt_idariya">
+      <End Role="employ" EntitySet="employSet" />
+      <End Role="doc_morasalt_idariya" EntitySet="doc_morasalt_idariyaSet" />
+    </AssociationSet>
+    <AssociationSet Name="employdoc_mo7asaba" Association="Model1.Store.employdoc_mo7asaba">
+      <End Role="employ" EntitySet="employSet" />
+      <End Role="doc_mo7asaba" EntitySet="doc_mo7asabaSet" />
+    </AssociationSet>
+    <AssociationSet Name="rotbaemploy" Association="Model1.Store.rotbaemploy">
+      <End Role="rotba" EntitySet="rotbaSet" />
+      <End Role="employ" EntitySet="employSet" />
+    </AssociationSet>
+    <AssociationSet Name="brancheemploy" Association="Model1.Store.brancheemploy">
+      <End Role="branche" EntitySet="brancheSet" />
+      <End Role="employ" EntitySet="employSet" />
+    </AssociationSet>
+    <AssociationSet Name="brancherotba" Association="Model1.Store.brancherotba">
+      <End Role="branche" EntitySet="brancheSet" />
+      <End Role="rotba" EntitySet="rotbaSet" />
+    </AssociationSet>
+    <AssociationSet Name="employdoc2_chngmnt_poste" Association="Model1.Store.employdoc2_chngmnt_poste">
+      <End Role="employ" EntitySet="employSet" />
+      <End Role="doc2_chngmnt_poste" EntitySet="doc2_chngmnt_posteSet" />
+    </AssociationSet>
+    <AssociationSet Name="employdoc2_chngmt_daraja" Association="Model1.Store.employdoc2_chngmt_daraja">
+      <End Role="employ" EntitySet="employSet" />
+      <End Role="doc2_chngmt_daraja" EntitySet="doc2_chngmt_darajaSet" />
+    </AssociationSet>
+    <AssociationSet Name="employdoc2_chngmnt_delgation" Association="Model1.Store.employdoc2_chngmnt_delgation">
+      <End Role="employ" EntitySet="employSet" />
+      <End Role="doc2_chngmnt_delgation" EntitySet="doc2_chngmnt_delgationSet" />
+    </AssociationSet>
+    <AssociationSet Name="employdoc2_charge_poste" Association="Model1.Store.employdoc2_charge_poste">
+      <End Role="employ" EntitySet="employSet" />
+      <End Role="doc2_charge_poste" EntitySet="doc2_charge_poste" />
+    </AssociationSet>
+    <AssociationSet Name="apc_annex_catgrapc_annex_catgr_detail" Association="Model1.Store.apc_annex_catgrapc_annex_catgr_detail">
+      <End Role="apc_annex_catgr" EntitySet="apc_annex_catgr" />
+      <End Role="apc_annex_catgr_detail" EntitySet="apc_annex_catgr_detail" />
+    </AssociationSet>
+    <AssociationSet Name="apc_annex_catgremploy" Association="Model1.Store.apc_annex_catgremploy">
+      <End Role="apc_annex_catgr" EntitySet="apc_annex_catgr" />
+      <End Role="employ" EntitySet="employSet" />
+    </AssociationSet>
+    <AssociationSet Name="apc_annex_catgr_detailemploy" Association="Model1.Store.apc_annex_catgr_detailemploy">
+      <End Role="apc_annex_catgr_detail" EntitySet="apc_annex_catgr_detail" />
+      <End Role="employ" EntitySet="employSet" />
+    </AssociationSet>
+    <AssociationSet Name="apc_annex_catgrdoc2_charge_poste" Association="Model1.Store.apc_annex_catgrdoc2_charge_poste">
+      <End Role="apc_annex_catgr" EntitySet="apc_annex_catgr" />
+      <End Role="doc2_charge_poste" EntitySet="doc2_charge_poste" />
+    </AssociationSet>
+    <AssociationSet Name="apc_annex_catgr_detaildoc2_charge_poste" Association="Model1.Store.apc_annex_catgr_detaildoc2_charge_poste">
+      <End Role="apc_annex_catgr_detail" EntitySet="apc_annex_catgr_detail" />
+      <End Role="doc2_charge_poste" EntitySet="doc2_charge_poste" />
+    </AssociationSet>
+    <AssociationSet Name="rotbadoc_promotion" Association="Model1.Store.rotbadoc_promotion">
+      <End Role="rotba" EntitySet="rotbaSet" />
+      <End Role="doc_promotion" EntitySet="doc_promotionSet" />
+    </AssociationSet>
+    <AssociationSet Name="loginemploy" Association="Model1.Store.loginemploy">
+      <End Role="login" EntitySet="logins" />
+      <End Role="employ" EntitySet="employSet" />
+    </AssociationSet>
+    <AssociationSet Name="employlieu_nominaiton" Association="Model1.Store.employlieu_nominaiton">
+      <End Role="employ" EntitySet="employSet" />
+      <End Role="lieu_nominaiton" EntitySet="lieu_nominaiton" />
+    </AssociationSet>
+    <AssociationSet Name="apc_annex_catgrlieu_nominaiton" Association="Model1.Store.apc_annex_catgrlieu_nominaiton">
+      <End Role="apc_annex_catgr" EntitySet="apc_annex_catgr" />
+      <End Role="lieu_nominaiton" EntitySet="lieu_nominaiton" />
+    </AssociationSet>
+    <AssociationSet Name="apc_annex_catgr_detaillieu_nominaiton" Association="Model1.Store.apc_annex_catgr_detaillieu_nominaiton">
+      <End Role="apc_annex_catgr_detail" EntitySet="apc_annex_catgr_detail" />
+      <End Role="lieu_nominaiton" EntitySet="lieu_nominaiton" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="employSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom_ar" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="prenom_ar" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nom_fr" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="prenom_fr" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="sex" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="date_n" Type="datetime" Nullable="true" />
+    <Property Name="lieu_n" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="adresse" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="photo" Type="varbinary(max)" Nullable="true" />
+    <Property Name="date_install" Type="datetime" Nullable="false" />
+    <Property Name="rank_orgnl" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="n_ccp" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="n_cnas" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="situation_fml" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="id_vacance" Type="int" Nullable="false" />
+    <Property Name="catgr" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nbr_children" Type="int" Nullable="true" />
+    <Property Name="service_nationale" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="date_out_work" Type="datetime" Nullable="true" />
+    <Property Name="etat_emply" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="rotba_id_rotba" Type="int" Nullable="false" />
+    <Property Name="branche_id_branche" Type="int" Nullable="false" />
+    <Property Name="date_n_bool" Type="bit" Nullable="false" />
+    <Property Name="date_n_prisime" Type="int" Nullable="true" />
+    <Property Name="prenom_pere" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="apc_annex_catgr_id_apc_annex" Type="int" Nullable="false" />
+    <Property Name="apc_annex_catgr_detail_id_annex_detail" Type="int" Nullable="false" />
+    <Property Name="diplome" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="login_id_user" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="doc_vacanceSet">
+    <Key>
+      <PropertyRef Name="id_vacnace" />
+    </Key>
+    <Property Name="id_vacnace" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vacance_year" Type="int" Nullable="false" />
+    <Property Name="nbr_cons" Type="int" Nullable="false" />
+    <Property Name="nbr_rest" Type="int" Nullable="false" />
+    <Property Name="date_vac_out" Type="datetime" Nullable="false" />
+    <Property Name="date_vac_in" Type="datetime" Nullable="false" />
+    <Property Name="nom_interim" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="employ_id" Type="int" Nullable="false" />
+    <Property Name="place_vac" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rotbaSet">
+    <Key>
+      <PropertyRef Name="id_rotba" />
+    </Key>
+    <Property Name="id_rotba" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom_rotba" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="sinf" Type="int" Nullable="false" />
+    <Property Name="istidl" Type="int" Nullable="false" />
+    <Property Name="silk" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="branche_id_branche" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="doc_promotionSet">
+    <Key>
+      <PropertyRef Name="id_promtion" />
+    </Key>
+    <Property Name="id_promtion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="n_promtion" Type="int" Nullable="false" />
+    <Property Name="date_promtion" Type="datetime" Nullable="false" />
+    <Property Name="employ_id" Type="int" Nullable="false" />
+    <Property Name="rotba_id_rotba" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="doc_ta9yimSet">
+    <Key>
+      <PropertyRef Name="id_ta9yom" />
+    </Key>
+    <Property Name="id_ta9yom" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type_ta9yim" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="employ_id" Type="int" Nullable="false" />
+    <Property Name="date_ta9yim" Type="datetime" Nullable="false" />
+    <Property Name="ta9dir_annee" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="doc_mo7asabaSet">
+    <Key>
+      <PropertyRef Name="id_mo7asaba" />
+    </Key>
+    <Property Name="id_mo7asaba" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nbr_day_absence" Type="int" Nullable="false" />
+    <Property Name="date1_abs" Type="datetime" Nullable="false" />
+    <Property Name="date2_abs" Type="datetime" Nullable="false" />
+    <Property Name="employ_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="doc_7arakaSet">
+    <Key>
+      <PropertyRef Name="id_7araka" />
+    </Key>
+    <Property Name="id_7araka" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type_7araka" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="date_start_7araka" Type="datetime" Nullable="false" />
+    <Property Name="date_fin_7araka" Type="datetime" Nullable="true" />
+    <Property Name="employ_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="doc_displineSet">
+    <Key>
+      <PropertyRef Name="id_displine" />
+    </Key>
+    <Property Name="id_displine" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="titre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="n_displine" Type="int" Nullable="false" />
+    <Property Name="hokem_9adaii" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="date_7okem" Type="datetime" Nullable="false" />
+    <Property Name="date_arrete" Type="datetime" Nullable="false" />
+    <Property Name="employ_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="doc_vacane_plusSet">
+    <Key>
+      <PropertyRef Name="id_vac_plus" />
+    </Key>
+    <Property Name="id_vac_plus" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="titre_vacplus" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="date_out_vacpus" Type="datetime" Nullable="false" />
+    <Property Name="date_in_vacplus" Type="datetime" Nullable="false" />
+    <Property Name="employ_id" Type="int" Nullable="false" />
+    <Property Name="nbr_day_vac" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="doc_morasalt_idariyaSet">
+    <Key>
+      <PropertyRef Name="id_morasalt" />
+    </Key>
+    <Property Name="id_morasalt" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="titre_morasala" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="employ_id" Type="int" Nullable="false" />
+    <Property Name="n_morasalt" Type="int" Nullable="false" />
+    <Property Name="date_morasalt" Type="datetime" Nullable="false" />
+    <Property Name="scan_doc_morsalt" Type="varbinary(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="brancheSet">
+    <Key>
+      <PropertyRef Name="id_branche" />
+    </Key>
+    <Property Name="id_branche" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom_branche" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nom_corp" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="doc2_chngmt_darajaSet">
+    <Key>
+      <PropertyRef Name="id_chngmnt_daraja" />
+    </Key>
+    <Property Name="id_chngmnt_daraja" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="period_daraja" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="valeur_daraja" Type="int" Nullable="false" />
+    <Property Name="date_daraja" Type="datetime" Nullable="false" />
+    <Property Name="employ_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="doc2_chngmnt_delgationSet">
+    <Key>
+      <PropertyRef Name="id_chngmnt_delegation" />
+    </Key>
+    <Property Name="id_chngmnt_delegation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="n_delegation" Type="int" Nullable="false" />
+    <Property Name="date_start_delegation" Type="datetime" Nullable="false" />
+    <Property Name="date_fin_delegation" Type="datetime" Nullable="true" />
+    <Property Name="type_delegation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="employ_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="doc2_chngmnt_posteSet">
+    <Key>
+      <PropertyRef Name="id_chngmnt_poste" />
+    </Key>
+    <Property Name="id_chngmnt_poste" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="n_chngmnt_poste" Type="int" Nullable="false" />
+    <Property Name="new_nomination_poste" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="date_start_nomination" Type="datetime" Nullable="false" />
+    <Property Name="date_fin_nomination" Type="datetime" Nullable="true" />
+    <Property Name="employ_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="doc2_charge_poste">
+    <Key>
+      <PropertyRef Name="id_charge" />
+    </Key>
+    <Property Name="id_charge" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="n_9arar_charge" Type="int" Nullable="false" />
+    <Property Name="date_start_charge" Type="datetime" Nullable="false" />
+    <Property Name="date_fin_charge" Type="datetime" Nullable="true" />
+    <Property Name="employ_id" Type="int" Nullable="false" />
+    <Property Name="apc_annex_catgr_id_apc_annex" Type="int" Nullable="false" />
+    <Property Name="apc_annex_catgr_detail_id_annex_detail" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="apc_annex_catgr">
+    <Key>
+      <PropertyRef Name="id_apc_annex" />
+    </Key>
+    <Property Name="id_apc_annex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom_apc_annex" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="apc_annex_catgr_detail">
+    <Key>
+      <PropertyRef Name="id_annex_detail" />
+    </Key>
+    <Property Name="id_annex_detail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom_annex_detail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="apc_annex_catgr_id_apc_annex" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="logins">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="permision_login" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lieu_nominaiton">
+    <Key>
+      <PropertyRef Name="id_lieu_nomination" />
+    </Key>
+    <Property Name="id_lieu_nomination" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date_change_lieu_nomination" Type="datetime" Nullable="false" />
+    <Property Name="employ_id" Type="int" Nullable="false" />
+    <Property Name="apc_annex_catgr_id_apc_annex" Type="int" Nullable="false" />
+    <Property Name="apc_annex_catgr_detail_id_annex_detail" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="employdoc_vacance">
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="doc_vacance" Type="Model1.Store.doc_vacanceSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="doc_vacance">
+        <PropertyRef Name="employ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="employdoc_promotion">
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="doc_promotion" Type="Model1.Store.doc_promotionSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="doc_promotion">
+        <PropertyRef Name="employ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="employdoc_ta9yim">
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="doc_ta9yim" Type="Model1.Store.doc_ta9yimSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="doc_ta9yim">
+        <PropertyRef Name="employ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="employdoc_displine">
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="doc_displine" Type="Model1.Store.doc_displineSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="doc_displine">
+        <PropertyRef Name="employ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="employdoc_7araka">
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="doc_7araka" Type="Model1.Store.doc_7arakaSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="doc_7araka">
+        <PropertyRef Name="employ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="employdoc_vacane_plus">
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="doc_vacane_plus" Type="Model1.Store.doc_vacane_plusSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="doc_vacane_plus">
+        <PropertyRef Name="employ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="employdoc_morasalt_idariya">
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="doc_morasalt_idariya" Type="Model1.Store.doc_morasalt_idariyaSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="doc_morasalt_idariya">
+        <PropertyRef Name="employ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="employdoc_mo7asaba">
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="doc_mo7asaba" Type="Model1.Store.doc_mo7asabaSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="doc_mo7asaba">
+        <PropertyRef Name="employ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="rotbaemploy">
+    <End Role="rotba" Type="Model1.Store.rotbaSet" Multiplicity="1" />
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rotba">
+        <PropertyRef Name="id_rotba" />
+      </Principal>
+      <Dependent Role="employ">
+        <PropertyRef Name="rotba_id_rotba" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="brancheemploy">
+    <End Role="branche" Type="Model1.Store.brancheSet" Multiplicity="1" />
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="branche">
+        <PropertyRef Name="id_branche" />
+      </Principal>
+      <Dependent Role="employ">
+        <PropertyRef Name="branche_id_branche" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="brancherotba">
+    <End Role="branche" Type="Model1.Store.brancheSet" Multiplicity="1" />
+    <End Role="rotba" Type="Model1.Store.rotbaSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="branche">
+        <PropertyRef Name="id_branche" />
+      </Principal>
+      <Dependent Role="rotba">
+        <PropertyRef Name="branche_id_branche" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="employdoc2_chngmnt_poste">
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="doc2_chngmnt_poste" Type="Model1.Store.doc2_chngmnt_posteSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="doc2_chngmnt_poste">
+        <PropertyRef Name="employ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="employdoc2_chngmt_daraja">
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="doc2_chngmt_daraja" Type="Model1.Store.doc2_chngmt_darajaSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="doc2_chngmt_daraja">
+        <PropertyRef Name="employ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="employdoc2_chngmnt_delgation">
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="doc2_chngmnt_delgation" Type="Model1.Store.doc2_chngmnt_delgationSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="doc2_chngmnt_delgation">
+        <PropertyRef Name="employ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="employdoc2_charge_poste">
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="doc2_charge_poste" Type="Model1.Store.doc2_charge_poste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="doc2_charge_poste">
+        <PropertyRef Name="employ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="apc_annex_catgrapc_annex_catgr_detail">
+    <End Role="apc_annex_catgr" Type="Model1.Store.apc_annex_catgr" Multiplicity="1" />
+    <End Role="apc_annex_catgr_detail" Type="Model1.Store.apc_annex_catgr_detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apc_annex_catgr">
+        <PropertyRef Name="id_apc_annex" />
+      </Principal>
+      <Dependent Role="apc_annex_catgr_detail">
+        <PropertyRef Name="apc_annex_catgr_id_apc_annex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="apc_annex_catgremploy">
+    <End Role="apc_annex_catgr" Type="Model1.Store.apc_annex_catgr" Multiplicity="1" />
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apc_annex_catgr">
+        <PropertyRef Name="id_apc_annex" />
+      </Principal>
+      <Dependent Role="employ">
+        <PropertyRef Name="apc_annex_catgr_id_apc_annex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="apc_annex_catgr_detailemploy">
+    <End Role="apc_annex_catgr_detail" Type="Model1.Store.apc_annex_catgr_detail" Multiplicity="1" />
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apc_annex_catgr_detail">
+        <PropertyRef Name="id_annex_detail" />
+      </Principal>
+      <Dependent Role="employ">
+        <PropertyRef Name="apc_annex_catgr_detail_id_annex_detail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="apc_annex_catgrdoc2_charge_poste">
+    <End Role="apc_annex_catgr" Type="Model1.Store.apc_annex_catgr" Multiplicity="1" />
+    <End Role="doc2_charge_poste" Type="Model1.Store.doc2_charge_poste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apc_annex_catgr">
+        <PropertyRef Name="id_apc_annex" />
+      </Principal>
+      <Dependent Role="doc2_charge_poste">
+        <PropertyRef Name="apc_annex_catgr_id_apc_annex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="apc_annex_catgr_detaildoc2_charge_poste">
+    <End Role="apc_annex_catgr_detail" Type="Model1.Store.apc_annex_catgr_detail" Multiplicity="1" />
+    <End Role="doc2_charge_poste" Type="Model1.Store.doc2_charge_poste" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apc_annex_catgr_detail">
+        <PropertyRef Name="id_annex_detail" />
+      </Principal>
+      <Dependent Role="doc2_charge_poste">
+        <PropertyRef Name="apc_annex_catgr_detail_id_annex_detail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="rotbadoc_promotion">
+    <End Role="rotba" Type="Model1.Store.rotbaSet" Multiplicity="1" />
+    <End Role="doc_promotion" Type="Model1.Store.doc_promotionSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rotba">
+        <PropertyRef Name="id_rotba" />
+      </Principal>
+      <Dependent Role="doc_promotion">
+        <PropertyRef Name="rotba_id_rotba" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="loginemploy">
+    <End Role="login" Type="Model1.Store.logins" Multiplicity="1" />
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="login">
+        <PropertyRef Name="id_user" />
+      </Principal>
+      <Dependent Role="employ">
+        <PropertyRef Name="login_id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="employlieu_nominaiton">
+    <End Role="employ" Type="Model1.Store.employSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="lieu_nominaiton" Type="Model1.Store.lieu_nominaiton" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employ">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="lieu_nominaiton">
+        <PropertyRef Name="employ_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="apc_annex_catgrlieu_nominaiton">
+    <End Role="apc_annex_catgr" Type="Model1.Store.apc_annex_catgr" Multiplicity="1" />
+    <End Role="lieu_nominaiton" Type="Model1.Store.lieu_nominaiton" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apc_annex_catgr">
+        <PropertyRef Name="id_apc_annex" />
+      </Principal>
+      <Dependent Role="lieu_nominaiton">
+        <PropertyRef Name="apc_annex_catgr_id_apc_annex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="apc_annex_catgr_detaillieu_nominaiton">
+    <End Role="apc_annex_catgr_detail" Type="Model1.Store.apc_annex_catgr_detail" Multiplicity="1" />
+    <End Role="lieu_nominaiton" Type="Model1.Store.lieu_nominaiton" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apc_annex_catgr_detail">
+        <PropertyRef Name="id_annex_detail" />
+      </Principal>
+      <Dependent Role="lieu_nominaiton">
+        <PropertyRef Name="apc_annex_catgr_detail_id_annex_detail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model1" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="employSet" EntityType="Model1.employ" />
+          <EntitySet Name="doc_vacanceSet" EntityType="Model1.doc_vacance" />
+          <EntitySet Name="rotbaSet" EntityType="Model1.rotba" />
+          <EntitySet Name="doc_promotionSet" EntityType="Model1.doc_promotion" />
+          <EntitySet Name="doc_ta9yimSet" EntityType="Model1.doc_ta9yim" />
+          <EntitySet Name="doc_mo7asabaSet" EntityType="Model1.doc_mo7asaba" />
+          <EntitySet Name="doc_7arakaSet" EntityType="Model1.doc_7araka" />
+          <EntitySet Name="doc_displineSet" EntityType="Model1.doc_displine" />
+          <EntitySet Name="doc_vacane_plusSet" EntityType="Model1.doc_vacane_plus" />
+          <EntitySet Name="doc_morasalt_idariyaSet" EntityType="Model1.doc_morasalt_idariya" />
+          <AssociationSet Name="employdoc_vacance" Association="Model1.employdoc_vacance">
+            <End Role="employ" EntitySet="employSet" />
+            <End Role="doc_vacance" EntitySet="doc_vacanceSet" />
+          </AssociationSet>
+          <AssociationSet Name="employdoc_promotion" Association="Model1.employdoc_promotion">
+            <End Role="employ" EntitySet="employSet" />
+            <End Role="doc_promotion" EntitySet="doc_promotionSet" />
+          </AssociationSet>
+          <AssociationSet Name="employdoc_ta9yim" Association="Model1.employdoc_ta9yim">
+            <End Role="employ" EntitySet="employSet" />
+            <End Role="doc_ta9yim" EntitySet="doc_ta9yimSet" />
+          </AssociationSet>
+          <AssociationSet Name="employdoc_displine" Association="Model1.employdoc_displine">
+            <End Role="employ" EntitySet="employSet" />
+            <End Role="doc_displine" EntitySet="doc_displineSet" />
+          </AssociationSet>
+          <AssociationSet Name="employdoc_7araka" Association="Model1.employdoc_7araka">
+            <End Role="employ" EntitySet="employSet" />
+            <End Role="doc_7araka" EntitySet="doc_7arakaSet" />
+          </AssociationSet>
+          <AssociationSet Name="employdoc_vacane_plus" Association="Model1.employdoc_vacane_plus">
+            <End Role="employ" EntitySet="employSet" />
+            <End Role="doc_vacane_plus" EntitySet="doc_vacane_plusSet" />
+          </AssociationSet>
+          <AssociationSet Name="employdoc_morasalt_idariya" Association="Model1.employdoc_morasalt_idariya">
+            <End Role="employ" EntitySet="employSet" />
+            <End Role="doc_morasalt_idariya" EntitySet="doc_morasalt_idariyaSet" />
+          </AssociationSet>
+          <AssociationSet Name="employdoc_mo7asaba" Association="Model1.employdoc_mo7asaba">
+            <End Role="employ" EntitySet="employSet" />
+            <End Role="doc_mo7asaba" EntitySet="doc_mo7asabaSet" />
+          </AssociationSet>
+          <EntitySet Name="brancheSet" EntityType="Model1.branche" />
+          <AssociationSet Name="rotbaemploy" Association="Model1.rotbaemploy">
+            <End Role="rotba" EntitySet="rotbaSet" />
+            <End Role="employ" EntitySet="employSet" />
+          </AssociationSet>
+          <AssociationSet Name="brancheemploy" Association="Model1.brancheemploy">
+            <End Role="branche" EntitySet="brancheSet" />
+            <End Role="employ" EntitySet="employSet" />
+          </AssociationSet>
+          <AssociationSet Name="brancherotba" Association="Model1.brancherotba">
+            <End Role="branche" EntitySet="brancheSet" />
+            <End Role="rotba" EntitySet="rotbaSet" />
+          </AssociationSet>
+          <EntitySet Name="doc2_chngmt_darajaSet" EntityType="Model1.doc2_chngmt_daraja" />
+          <EntitySet Name="doc2_chngmnt_delgationSet" EntityType="Model1.doc2_chngmnt_delgation" />
+          <EntitySet Name="doc2_chngmnt_posteSet" EntityType="Model1.doc2_chngmnt_poste" />
+          <AssociationSet Name="employdoc2_chngmnt_poste" Association="Model1.employdoc2_chngmnt_poste">
+            <End Role="employ" EntitySet="employSet" />
+            <End Role="doc2_chngmnt_poste" EntitySet="doc2_chngmnt_posteSet" />
+          </AssociationSet>
+          <AssociationSet Name="employdoc2_chngmt_daraja" Association="Model1.employdoc2_chngmt_daraja">
+            <End Role="employ" EntitySet="employSet" />
+            <End Role="doc2_chngmt_daraja" EntitySet="doc2_chngmt_darajaSet" />
+          </AssociationSet>
+          <AssociationSet Name="employdoc2_chngmnt_delgation" Association="Model1.employdoc2_chngmnt_delgation">
+            <End Role="employ" EntitySet="employSet" />
+            <End Role="doc2_chngmnt_delgation" EntitySet="doc2_chngmnt_delgationSet" />
+          </AssociationSet>
+          <EntitySet Name="doc2_charge_poste" EntityType="Model1.doc2_charge_poste" />
+          <AssociationSet Name="employdoc2_charge_poste" Association="Model1.employdoc2_charge_poste">
+            <End Role="employ" EntitySet="employSet" />
+            <End Role="doc2_charge_poste" EntitySet="doc2_charge_poste" />
+          </AssociationSet>
+          <EntitySet Name="apc_annex_catgr" EntityType="Model1.apc_annex_catgr" />
+          <EntitySet Name="apc_annex_catgr_detail" EntityType="Model1.apc_annex_catgr_detail" />
+          <AssociationSet Name="apc_annex_catgrapc_annex_catgr_detail" Association="Model1.apc_annex_catgrapc_annex_catgr_detail">
+            <End Role="apc_annex_catgr" EntitySet="apc_annex_catgr" />
+            <End Role="apc_annex_catgr_detail" EntitySet="apc_annex_catgr_detail" />
+          </AssociationSet>
+          <AssociationSet Name="apc_annex_catgremploy" Association="Model1.apc_annex_catgremploy">
+            <End Role="apc_annex_catgr" EntitySet="apc_annex_catgr" />
+            <End Role="employ" EntitySet="employSet" />
+          </AssociationSet>
+          <AssociationSet Name="apc_annex_catgr_detailemploy" Association="Model1.apc_annex_catgr_detailemploy">
+            <End Role="apc_annex_catgr_detail" EntitySet="apc_annex_catgr_detail" />
+            <End Role="employ" EntitySet="employSet" />
+          </AssociationSet>
+          <AssociationSet Name="apc_annex_catgrdoc2_charge_poste" Association="Model1.apc_annex_catgrdoc2_charge_poste">
+            <End Role="apc_annex_catgr" EntitySet="apc_annex_catgr" />
+            <End Role="doc2_charge_poste" EntitySet="doc2_charge_poste" />
+          </AssociationSet>
+          <AssociationSet Name="apc_annex_catgr_detaildoc2_charge_poste" Association="Model1.apc_annex_catgr_detaildoc2_charge_poste">
+            <End Role="apc_annex_catgr_detail" EntitySet="apc_annex_catgr_detail" />
+            <End Role="doc2_charge_poste" EntitySet="doc2_charge_poste" />
+          </AssociationSet>
+          <AssociationSet Name="rotbadoc_promotion" Association="Model1.rotbadoc_promotion">
+            <End Role="rotba" EntitySet="rotbaSet" />
+            <End Role="doc_promotion" EntitySet="doc_promotionSet" />
+          </AssociationSet>
+          <EntitySet Name="logins" EntityType="Model1.login" />
+          <AssociationSet Name="loginemploy" Association="Model1.loginemploy">
+            <End Role="login" EntitySet="logins" />
+            <End Role="employ" EntitySet="employSet" />
+          </AssociationSet>
+          <EntitySet Name="lieu_nominaiton" EntityType="Model1.lieu_nominaiton" />
+          <AssociationSet Name="employlieu_nominaiton" Association="Model1.employlieu_nominaiton">
+            <End Role="employ" EntitySet="employSet" />
+            <End Role="lieu_nominaiton" EntitySet="lieu_nominaiton" />
+          </AssociationSet>
+          <AssociationSet Name="apc_annex_catgrlieu_nominaiton" Association="Model1.apc_annex_catgrlieu_nominaiton">
+            <End Role="apc_annex_catgr" EntitySet="apc_annex_catgr" />
+            <End Role="lieu_nominaiton" EntitySet="lieu_nominaiton" />
+          </AssociationSet>
+          <AssociationSet Name="apc_annex_catgr_detaillieu_nominaiton" Association="Model1.apc_annex_catgr_detaillieu_nominaiton">
+            <End Role="apc_annex_catgr_detail" EntitySet="apc_annex_catgr_detail" />
+            <End Role="lieu_nominaiton" EntitySet="lieu_nominaiton" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="employ">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="nom_ar" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="prenom_ar" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="nom_fr" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="prenom_fr" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="sex" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="date_n" Type="DateTime" Nullable="true" Precision="3" />
+          <Property Name="lieu_n" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="adresse" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="true" />
+          <Property Name="date_install" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="rank_orgnl" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="n_ccp" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="n_cnas" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <Property Name="situation_fml" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="id_vacance" Type="Int32" Nullable="false" />
+          <Property Name="catgr" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="nbr_children" Type="Int32" Nullable="true" />
+          <Property Name="service_nationale" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="date_out_work" Type="DateTime" Nullable="true" Precision="3" />
+          <NavigationProperty Name="doc_vacance" Relationship="Model1.employdoc_vacance" FromRole="employ" ToRole="doc_vacance" />
+          <NavigationProperty Name="doc_promotion" Relationship="Model1.employdoc_promotion" FromRole="employ" ToRole="doc_promotion" />
+          <NavigationProperty Name="doc_ta9yim" Relationship="Model1.employdoc_ta9yim" FromRole="employ" ToRole="doc_ta9yim" />
+          <NavigationProperty Name="doc_displine" Relationship="Model1.employdoc_displine" FromRole="employ" ToRole="doc_displine" />
+          <NavigationProperty Name="doc_7araka" Relationship="Model1.employdoc_7araka" FromRole="employ" ToRole="doc_7araka" />
+          <NavigationProperty Name="doc_vacane_plus" Relationship="Model1.employdoc_vacane_plus" FromRole="employ" ToRole="doc_vacane_plus" />
+          <NavigationProperty Name="doc_morasalt_idariya" Relationship="Model1.employdoc_morasalt_idariya" FromRole="employ" ToRole="doc_morasalt_idariya" />
+          <NavigationProperty Name="doc_mo7asaba" Relationship="Model1.employdoc_mo7asaba" FromRole="employ" ToRole="doc_mo7asaba" />
+          <Property Name="etat_emply" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="rotba" Relationship="Model1.rotbaemploy" FromRole="employ" ToRole="rotba" />
+          <Property Name="rotba_id_rotba" Type="Int32" Nullable="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <NavigationProperty Name="branche" Relationship="Model1.brancheemploy" FromRole="employ" ToRole="branche" />
+          <Property Name="branche_id_branche" Type="Int32" Nullable="false" />
+          <Property Name="date_n_bool" Type="Boolean" Nullable="false" />
+          <Property Name="date_n_prisime" Type="Int32" Nullable="true" />
+          <Property Name="prenom_pere" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" Nullable="true" />
+          <NavigationProperty Name="doc2_chngmnt_poste" Relationship="Model1.employdoc2_chngmnt_poste" FromRole="employ" ToRole="doc2_chngmnt_poste" />
+          <NavigationProperty Name="doc2_chngmt_daraja" Relationship="Model1.employdoc2_chngmt_daraja" FromRole="employ" ToRole="doc2_chngmt_daraja" />
+          <NavigationProperty Name="doc2_chngmnt_delgation" Relationship="Model1.employdoc2_chngmnt_delgation" FromRole="employ" ToRole="doc2_chngmnt_delgation" />
+          <NavigationProperty Name="doc2_charge_poste" Relationship="Model1.employdoc2_charge_poste" FromRole="employ" ToRole="doc2_charge_poste" />
+          <NavigationProperty Name="apc_annex_catgr" Relationship="Model1.apc_annex_catgremploy" FromRole="employ" ToRole="apc_annex_catgr" />
+          <Property Name="apc_annex_catgr_id_apc_annex" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="apc_annex_catgr_detail" Relationship="Model1.apc_annex_catgr_detailemploy" FromRole="employ" ToRole="apc_annex_catgr_detail" />
+          <Property Name="apc_annex_catgr_detail_id_annex_detail" Type="Int32" Nullable="false" />
+          <Property Name="diplome" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="login" Relationship="Model1.loginemploy" FromRole="employ" ToRole="login" />
+          <Property Name="login_id_user" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="lieu_nominaiton" Relationship="Model1.employlieu_nominaiton" FromRole="employ" ToRole="lieu_nominaiton" />
+        </EntityType>
+        <EntityType Name="doc_vacance">
+          <Key>
+            <PropertyRef Name="id_vacnace" />
+          </Key>
+          <Property Name="id_vacnace" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="vacance_year" Type="Int32" Nullable="false" />
+          <Property Name="nbr_cons" Type="Int32" Nullable="false" />
+          <Property Name="nbr_rest" Type="Int32" Nullable="false" />
+          <Property Name="date_vac_out" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="date_vac_in" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="nom_interim" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="employ" Relationship="Model1.employdoc_vacance" FromRole="doc_vacance" ToRole="employ" />
+          <Property Name="employ_id" Type="Int32" Nullable="false" />
+          <Property Name="place_vac" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rotba">
+          <Key>
+            <PropertyRef Name="id_rotba" />
+          </Key>
+          <Property Name="id_rotba" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="nom_rotba" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="sinf" Type="Int32" Nullable="false" />
+          <Property Name="istidl" Type="Int32" Nullable="false" />
+          <Property Name="silk" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="employ" Relationship="Model1.rotbaemploy" FromRole="rotba" ToRole="employ" />
+          <NavigationProperty Name="branche" Relationship="Model1.brancherotba" FromRole="rotba" ToRole="branche" />
+          <Property Name="branche_id_branche" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="doc_promotion">
+          <Key>
+            <PropertyRef Name="id_promtion" />
+          </Key>
+          <Property xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" Name="id_promtion" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="n_promtion" Type="Int32" Nullable="false" />
+          <Property Name="date_promtion" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="employ" Relationship="Model1.employdoc_promotion" FromRole="doc_promotion" ToRole="employ" />
+          <Property Name="employ_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="rotba" Relationship="Model1.rotbadoc_promotion" FromRole="doc_promotion" ToRole="rotba" />
+          <Property Name="rotba_id_rotba" Type="Int32" Nullable="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="doc_ta9yim">
+          <Key>
+            <PropertyRef Name="id_ta9yom" />
+          </Key>
+          <Property xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" Name="id_ta9yom" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="type_ta9yim" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="employ" Relationship="Model1.employdoc_ta9yim" FromRole="doc_ta9yim" ToRole="employ" />
+          <Property Name="employ_id" Type="Int32" Nullable="false" />
+          <Property Name="date_ta9yim" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ta9dir_annee" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="doc_mo7asaba">
+          <Key>
+            <PropertyRef Name="id_mo7asaba" />
+          </Key>
+          <Property Name="id_mo7asaba" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="nbr_day_absence" Type="Int32" Nullable="false" />
+          <Property Name="date1_abs" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="date2_abs" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="employ" Relationship="Model1.employdoc_mo7asaba" FromRole="doc_mo7asaba" ToRole="employ" />
+          <Property Name="employ_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="doc_7araka">
+          <Key>
+            <PropertyRef Name="id_7araka" />
+          </Key>
+          <Property Name="id_7araka" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="type_7araka" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="date_start_7araka" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="date_fin_7araka" Type="DateTime" Nullable="true" Precision="3" />
+          <NavigationProperty Name="employ" Relationship="Model1.employdoc_7araka" FromRole="doc_7araka" ToRole="employ" />
+          <Property Name="employ_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="doc_displine">
+          <Key>
+            <PropertyRef Name="id_displine" />
+          </Key>
+          <Property Name="id_displine" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="titre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="n_displine" Type="Int32" Nullable="false" />
+          <Property Name="hokem_9adaii" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="date_7okem" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="date_arrete" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="employ" Relationship="Model1.employdoc_displine" FromRole="doc_displine" ToRole="employ" />
+          <Property Name="employ_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="doc_vacane_plus">
+          <Key>
+            <PropertyRef Name="id_vac_plus" />
+          </Key>
+          <Property Name="id_vac_plus" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="titre_vacplus" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="date_out_vacpus" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="date_in_vacplus" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="employ" Relationship="Model1.employdoc_vacane_plus" FromRole="doc_vacane_plus" ToRole="employ" />
+          <Property Name="employ_id" Type="Int32" Nullable="false" />
+          <Property Name="nbr_day_vac" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="doc_morasalt_idariya">
+          <Key>
+            <PropertyRef Name="id_morasalt" />
+          </Key>
+          <Property Name="id_morasalt" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="titre_morasala" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="employ" Relationship="Model1.employdoc_morasalt_idariya" FromRole="doc_morasalt_idariya" ToRole="employ" />
+          <Property Name="employ_id" Type="Int32" Nullable="false" />
+          <Property Name="n_morasalt" Type="Int32" Nullable="false" />
+          <Property Name="date_morasalt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="scan_doc_morsalt" Type="Binary" Nullable="true" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="employdoc_vacance">
+          <End Type="Model1.employ" Role="employ" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model1.doc_vacance" Role="doc_vacance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employ">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="doc_vacance">
+              <PropertyRef Name="employ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="employdoc_promotion">
+          <End Type="Model1.employ" Role="employ" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model1.doc_promotion" Role="doc_promotion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employ">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="doc_promotion">
+              <PropertyRef Name="employ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="employdoc_ta9yim">
+          <End Type="Model1.employ" Role="employ" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model1.doc_ta9yim" Role="doc_ta9yim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employ">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="doc_ta9yim">
+              <PropertyRef Name="employ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="employdoc_displine">
+          <End Type="Model1.employ" Role="employ" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model1.doc_displine" Role="doc_displine" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employ">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="doc_displine">
+              <PropertyRef Name="employ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="employdoc_7araka">
+          <End Type="Model1.employ" Role="employ" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model1.doc_7araka" Role="doc_7araka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employ">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="doc_7araka">
+              <PropertyRef Name="employ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="employdoc_vacane_plus">
+          <End Type="Model1.employ" Role="employ" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model1.doc_vacane_plus" Role="doc_vacane_plus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employ">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="doc_vacane_plus">
+              <PropertyRef Name="employ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="employdoc_morasalt_idariya">
+          <End Type="Model1.employ" Role="employ" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model1.doc_morasalt_idariya" Role="doc_morasalt_idariya" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employ">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="doc_morasalt_idariya">
+              <PropertyRef Name="employ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="employdoc_mo7asaba">
+          <End Type="Model1.employ" Role="employ" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model1.doc_mo7asaba" Role="doc_mo7asaba" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employ">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="doc_mo7asaba">
+              <PropertyRef Name="employ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="branche">
+          <Key>
+            <PropertyRef Name="id_branche" />
+          </Key>
+          <Property Name="id_branche" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom_branche" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="nom_corp" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="employ" Relationship="Model1.brancheemploy" FromRole="branche" ToRole="employ" />
+          <NavigationProperty Name="rotba" Relationship="Model1.brancherotba" FromRole="branche" ToRole="rotba" />
+        </EntityType>
+        <Association Name="rotbaemploy">
+          <End Type="Model1.rotba" Role="rotba" Multiplicity="1" />
+          <End Type="Model1.employ" Role="employ" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rotba">
+              <PropertyRef Name="id_rotba" />
+            </Principal>
+            <Dependent Role="employ">
+              <PropertyRef Name="rotba_id_rotba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="brancheemploy">
+          <End Type="Model1.branche" Role="branche" Multiplicity="1" />
+          <End Type="Model1.employ" Role="employ" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="branche">
+              <PropertyRef Name="id_branche" />
+            </Principal>
+            <Dependent Role="employ">
+              <PropertyRef Name="branche_id_branche" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="brancherotba">
+          <End Type="Model1.branche" Role="branche" Multiplicity="1" />
+          <End Type="Model1.rotba" Role="rotba" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="branche">
+              <PropertyRef Name="id_branche" />
+            </Principal>
+            <Dependent Role="rotba">
+              <PropertyRef Name="branche_id_branche" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="doc2_chngmt_daraja">
+          <Key>
+            <PropertyRef Name="id_chngmnt_daraja" />
+          </Key>
+          <Property Name="id_chngmnt_daraja" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="period_daraja" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="valeur_daraja" Type="Int32" Nullable="false" />
+          <Property Name="date_daraja" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="employ" Relationship="Model1.employdoc2_chngmt_daraja" FromRole="doc2_chngmt_daraja" ToRole="employ" />
+          <Property Name="employ_id" Type="Int32" Nullable="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="doc2_chngmnt_delgation">
+          <Key>
+            <PropertyRef Name="id_chngmnt_delegation" />
+          </Key>
+          <Property Name="id_chngmnt_delegation" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="n_delegation" Type="Int32" Nullable="false" />
+          <Property Name="date_start_delegation" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="date_fin_delegation" Type="DateTime" Nullable="true" Precision="3" />
+          <Property Name="type_delegation" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="employ" Relationship="Model1.employdoc2_chngmnt_delgation" FromRole="doc2_chngmnt_delgation" ToRole="employ" />
+          <Property Name="employ_id" Type="Int32" Nullable="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="doc2_chngmnt_poste">
+          <Key>
+            <PropertyRef Name="id_chngmnt_poste" />
+          </Key>
+          <Property Name="id_chngmnt_poste" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="n_chngmnt_poste" Type="Int32" Nullable="false" />
+          <Property Name="new_nomination_poste" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="date_start_nomination" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="date_fin_nomination" Type="DateTime" Nullable="true" Precision="3" />
+          <NavigationProperty Name="employ" Relationship="Model1.employdoc2_chngmnt_poste" FromRole="doc2_chngmnt_poste" ToRole="employ" />
+          <Property Name="employ_id" Type="Int32" Nullable="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <Association Name="employdoc2_chngmnt_poste">
+          <End Type="Model1.employ" Role="employ" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model1.doc2_chngmnt_poste" Role="doc2_chngmnt_poste" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employ">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="doc2_chngmnt_poste">
+              <PropertyRef Name="employ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="employdoc2_chngmt_daraja">
+          <End Type="Model1.employ" Role="employ" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model1.doc2_chngmt_daraja" Role="doc2_chngmt_daraja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employ">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="doc2_chngmt_daraja">
+              <PropertyRef Name="employ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="employdoc2_chngmnt_delgation">
+          <End Type="Model1.employ" Role="employ" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model1.doc2_chngmnt_delgation" Role="doc2_chngmnt_delgation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employ">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="doc2_chngmnt_delgation">
+              <PropertyRef Name="employ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="doc2_charge_poste">
+          <Key>
+            <PropertyRef Name="id_charge" />
+          </Key>
+          <Property Name="id_charge" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="n_9arar_charge" Type="Int32" Nullable="false" />
+          <Property Name="date_start_charge" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="date_fin_charge" Type="DateTime" Nullable="true" Precision="3" />
+          <NavigationProperty Name="employ" Relationship="Model1.employdoc2_charge_poste" FromRole="doc2_charge_poste" ToRole="employ" />
+          <Property Name="employ_id" Type="Int32" Nullable="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <NavigationProperty Name="apc_annex_catgr" Relationship="Model1.apc_annex_catgrdoc2_charge_poste" FromRole="doc2_charge_poste" ToRole="apc_annex_catgr" />
+          <Property Name="apc_annex_catgr_id_apc_annex" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="apc_annex_catgr_detail" Relationship="Model1.apc_annex_catgr_detaildoc2_charge_poste" FromRole="doc2_charge_poste" ToRole="apc_annex_catgr_detail" />
+          <Property Name="apc_annex_catgr_detail_id_annex_detail" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="employdoc2_charge_poste">
+          <End Type="Model1.employ" Role="employ" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model1.doc2_charge_poste" Role="doc2_charge_poste" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employ">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="doc2_charge_poste">
+              <PropertyRef Name="employ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="apc_annex_catgr">
+          <Key>
+            <PropertyRef Name="id_apc_annex" />
+          </Key>
+          <Property Name="id_apc_annex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom_apc_annex" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="apc_annex_catgr_detail" Relationship="Model1.apc_annex_catgrapc_annex_catgr_detail" FromRole="apc_annex_catgr" ToRole="apc_annex_catgr_detail" />
+          <NavigationProperty Name="employs" Relationship="Model1.apc_annex_catgremploy" FromRole="apc_annex_catgr" ToRole="employ" />
+          <NavigationProperty Name="doc2_charge_poste" Relationship="Model1.apc_annex_catgrdoc2_charge_poste" FromRole="apc_annex_catgr" ToRole="doc2_charge_poste" />
+          <NavigationProperty Name="lieu_nominaiton" Relationship="Model1.apc_annex_catgrlieu_nominaiton" FromRole="apc_annex_catgr" ToRole="lieu_nominaiton" />
+        </EntityType>
+        <EntityType Name="apc_annex_catgr_detail">
+          <Key>
+            <PropertyRef Name="id_annex_detail" />
+          </Key>
+          <Property Name="id_annex_detail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom_annex_detail" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="apc_annex_catgr" Relationship="Model1.apc_annex_catgrapc_annex_catgr_detail" FromRole="apc_annex_catgr_detail" ToRole="apc_annex_catgr" />
+          <Property Name="apc_annex_catgr_id_apc_annex" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="employs" Relationship="Model1.apc_annex_catgr_detailemploy" FromRole="apc_annex_catgr_detail" ToRole="employ" />
+          <NavigationProperty Name="doc2_charge_poste" Relationship="Model1.apc_annex_catgr_detaildoc2_charge_poste" FromRole="apc_annex_catgr_detail" ToRole="doc2_charge_poste" />
+          <NavigationProperty Name="lieu_nominaiton" Relationship="Model1.apc_annex_catgr_detaillieu_nominaiton" FromRole="apc_annex_catgr_detail" ToRole="lieu_nominaiton" />
+        </EntityType>
+        <Association Name="apc_annex_catgrapc_annex_catgr_detail">
+          <End Type="Model1.apc_annex_catgr" Role="apc_annex_catgr" Multiplicity="1" />
+          <End Type="Model1.apc_annex_catgr_detail" Role="apc_annex_catgr_detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="apc_annex_catgr">
+              <PropertyRef Name="id_apc_annex" />
+            </Principal>
+            <Dependent Role="apc_annex_catgr_detail">
+              <PropertyRef Name="apc_annex_catgr_id_apc_annex" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="apc_annex_catgremploy">
+          <End Type="Model1.apc_annex_catgr" Role="apc_annex_catgr" Multiplicity="1" />
+          <End Type="Model1.employ" Role="employ" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="apc_annex_catgr">
+              <PropertyRef Name="id_apc_annex" />
+            </Principal>
+            <Dependent Role="employ">
+              <PropertyRef Name="apc_annex_catgr_id_apc_annex" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="apc_annex_catgr_detailemploy">
+          <End Type="Model1.apc_annex_catgr_detail" Role="apc_annex_catgr_detail" Multiplicity="1" />
+          <End Type="Model1.employ" Role="employ" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="apc_annex_catgr_detail">
+              <PropertyRef Name="id_annex_detail" />
+            </Principal>
+            <Dependent Role="employ">
+              <PropertyRef Name="apc_annex_catgr_detail_id_annex_detail" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="apc_annex_catgrdoc2_charge_poste">
+          <End Type="Model1.apc_annex_catgr" Role="apc_annex_catgr" Multiplicity="1" />
+          <End Type="Model1.doc2_charge_poste" Role="doc2_charge_poste" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="apc_annex_catgr">
+              <PropertyRef Name="id_apc_annex" />
+            </Principal>
+            <Dependent Role="doc2_charge_poste">
+              <PropertyRef Name="apc_annex_catgr_id_apc_annex" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="apc_annex_catgr_detaildoc2_charge_poste">
+          <End Type="Model1.apc_annex_catgr_detail" Role="apc_annex_catgr_detail" Multiplicity="1" />
+          <End Type="Model1.doc2_charge_poste" Role="doc2_charge_poste" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="apc_annex_catgr_detail">
+              <PropertyRef Name="id_annex_detail" />
+            </Principal>
+            <Dependent Role="doc2_charge_poste">
+              <PropertyRef Name="apc_annex_catgr_detail_id_annex_detail" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="rotbadoc_promotion">
+          <End Type="Model1.rotba" Role="rotba" Multiplicity="1" />
+          <End Type="Model1.doc_promotion" Role="doc_promotion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rotba">
+              <PropertyRef Name="id_rotba" />
+            </Principal>
+            <Dependent Role="doc_promotion">
+              <PropertyRef Name="rotba_id_rotba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="login">
+          <Key>
+            <PropertyRef Name="id_user" />
+          </Key>
+          <Property Name="id_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_name" Type="String" Nullable="false" />
+          <Property Name="password" Type="String" Nullable="false" />
+          <Property Name="permision_login" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="employs" Relationship="Model1.loginemploy" FromRole="login" ToRole="employ" />
+        </EntityType>
+        <Association Name="loginemploy">
+          <End Type="Model1.login" Role="login" Multiplicity="1" />
+          <End Type="Model1.employ" Role="employ" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="login">
+              <PropertyRef Name="id_user" />
+            </Principal>
+            <Dependent Role="employ">
+              <PropertyRef Name="login_id_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="lieu_nominaiton">
+          <Key>
+            <PropertyRef Name="id_lieu_nomination" />
+          </Key>
+          <Property Name="id_lieu_nomination" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="date_change_lieu_nomination" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="employ" Relationship="Model1.employlieu_nominaiton" FromRole="lieu_nominaiton" ToRole="employ" />
+          <Property Name="employ_id" Type="Int32" Nullable="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <NavigationProperty Name="apc_annex_catgr" Relationship="Model1.apc_annex_catgrlieu_nominaiton" FromRole="lieu_nominaiton" ToRole="apc_annex_catgr" />
+          <Property Name="apc_annex_catgr_id_apc_annex" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="apc_annex_catgr_detail" Relationship="Model1.apc_annex_catgr_detaillieu_nominaiton" FromRole="lieu_nominaiton" ToRole="apc_annex_catgr_detail" />
+          <Property Name="apc_annex_catgr_detail_id_annex_detail" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="employlieu_nominaiton">
+          <End Type="Model1.employ" Role="employ" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="Model1.lieu_nominaiton" Role="lieu_nominaiton" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employ">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="lieu_nominaiton">
+              <PropertyRef Name="employ_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="apc_annex_catgrlieu_nominaiton">
+          <End Type="Model1.apc_annex_catgr" Role="apc_annex_catgr" Multiplicity="1" />
+          <End Type="Model1.lieu_nominaiton" Role="lieu_nominaiton" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="apc_annex_catgr">
+              <PropertyRef Name="id_apc_annex" />
+            </Principal>
+            <Dependent Role="lieu_nominaiton">
+              <PropertyRef Name="apc_annex_catgr_id_apc_annex" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="apc_annex_catgr_detaillieu_nominaiton">
+          <End Type="Model1.apc_annex_catgr_detail" Role="apc_annex_catgr_detail" Multiplicity="1" />
+          <End Type="Model1.lieu_nominaiton" Role="lieu_nominaiton" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="apc_annex_catgr_detail">
+              <PropertyRef Name="id_annex_detail" />
+            </Principal>
+            <Dependent Role="lieu_nominaiton">
+              <PropertyRef Name="apc_annex_catgr_detail_id_annex_detail" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="employSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.employ)">
+        <MappingFragment StoreEntitySet="employSet">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nom_ar" ColumnName="nom_ar" />
+          <ScalarProperty Name="prenom_ar" ColumnName="prenom_ar" />
+          <ScalarProperty Name="nom_fr" ColumnName="nom_fr" />
+          <ScalarProperty Name="prenom_fr" ColumnName="prenom_fr" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="date_n" ColumnName="date_n" />
+          <ScalarProperty Name="lieu_n" ColumnName="lieu_n" />
+          <ScalarProperty Name="adresse" ColumnName="adresse" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="date_install" ColumnName="date_install" />
+          <ScalarProperty Name="rank_orgnl" ColumnName="rank_orgnl" />
+          <ScalarProperty Name="n_ccp" ColumnName="n_ccp" />
+          <ScalarProperty Name="n_cnas" ColumnName="n_cnas" />
+          <ScalarProperty Name="situation_fml" ColumnName="situation_fml" />
+          <ScalarProperty Name="id_vacance" ColumnName="id_vacance" />
+          <ScalarProperty Name="catgr" ColumnName="catgr" />
+          <ScalarProperty Name="nbr_children" ColumnName="nbr_children" />
+          <ScalarProperty Name="service_nationale" ColumnName="service_nationale" />
+          <ScalarProperty Name="date_out_work" ColumnName="date_out_work" />
+          <ScalarProperty Name="etat_emply" ColumnName="etat_emply" />
+          <ScalarProperty Name="rotba_id_rotba" ColumnName="rotba_id_rotba" />
+          <ScalarProperty Name="branche_id_branche" ColumnName="branche_id_branche" />
+          <ScalarProperty Name="date_n_bool" ColumnName="date_n_bool" />
+          <ScalarProperty Name="date_n_prisime" ColumnName="date_n_prisime" />
+          <ScalarProperty Name="prenom_pere" ColumnName="prenom_pere" />
+          <ScalarProperty Name="apc_annex_catgr_id_apc_annex" ColumnName="apc_annex_catgr_id_apc_annex" />
+          <ScalarProperty Name="apc_annex_catgr_detail_id_annex_detail" ColumnName="apc_annex_catgr_detail_id_annex_detail" />
+          <ScalarProperty Name="diplome" ColumnName="diplome" />
+          <ScalarProperty Name="login_id_user" ColumnName="login_id_user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doc_vacanceSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.doc_vacance)">
+        <MappingFragment StoreEntitySet="doc_vacanceSet">
+          <ScalarProperty Name="id_vacnace" ColumnName="id_vacnace" />
+          <ScalarProperty Name="vacance_year" ColumnName="vacance_year" />
+          <ScalarProperty Name="nbr_cons" ColumnName="nbr_cons" />
+          <ScalarProperty Name="nbr_rest" ColumnName="nbr_rest" />
+          <ScalarProperty Name="date_vac_out" ColumnName="date_vac_out" />
+          <ScalarProperty Name="date_vac_in" ColumnName="date_vac_in" />
+          <ScalarProperty Name="nom_interim" ColumnName="nom_interim" />
+          <ScalarProperty Name="employ_id" ColumnName="employ_id" />
+          <ScalarProperty Name="place_vac" ColumnName="place_vac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rotbaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.rotba)">
+        <MappingFragment StoreEntitySet="rotbaSet">
+          <ScalarProperty Name="id_rotba" ColumnName="id_rotba" />
+          <ScalarProperty Name="nom_rotba" ColumnName="nom_rotba" />
+          <ScalarProperty Name="sinf" ColumnName="sinf" />
+          <ScalarProperty Name="istidl" ColumnName="istidl" />
+          <ScalarProperty Name="silk" ColumnName="silk" />
+          <ScalarProperty Name="branche_id_branche" ColumnName="branche_id_branche" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doc_promotionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.doc_promotion)">
+        <MappingFragment StoreEntitySet="doc_promotionSet">
+          <ScalarProperty Name="id_promtion" ColumnName="id_promtion" />
+          <ScalarProperty Name="n_promtion" ColumnName="n_promtion" />
+          <ScalarProperty Name="date_promtion" ColumnName="date_promtion" />
+          <ScalarProperty Name="employ_id" ColumnName="employ_id" />
+          <ScalarProperty Name="rotba_id_rotba" ColumnName="rotba_id_rotba" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doc_ta9yimSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.doc_ta9yim)">
+        <MappingFragment StoreEntitySet="doc_ta9yimSet">
+          <ScalarProperty Name="id_ta9yom" ColumnName="id_ta9yom" />
+          <ScalarProperty Name="type_ta9yim" ColumnName="type_ta9yim" />
+          <ScalarProperty Name="employ_id" ColumnName="employ_id" />
+          <ScalarProperty Name="date_ta9yim" ColumnName="date_ta9yim" />
+          <ScalarProperty Name="ta9dir_annee" ColumnName="ta9dir_annee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doc_mo7asabaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.doc_mo7asaba)">
+        <MappingFragment StoreEntitySet="doc_mo7asabaSet">
+          <ScalarProperty Name="id_mo7asaba" ColumnName="id_mo7asaba" />
+          <ScalarProperty Name="nbr_day_absence" ColumnName="nbr_day_absence" />
+          <ScalarProperty Name="date1_abs" ColumnName="date1_abs" />
+          <ScalarProperty Name="date2_abs" ColumnName="date2_abs" />
+          <ScalarProperty Name="employ_id" ColumnName="employ_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doc_7arakaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.doc_7araka)">
+        <MappingFragment StoreEntitySet="doc_7arakaSet">
+          <ScalarProperty Name="id_7araka" ColumnName="id_7araka" />
+          <ScalarProperty Name="type_7araka" ColumnName="type_7araka" />
+          <ScalarProperty Name="date_start_7araka" ColumnName="date_start_7araka" />
+          <ScalarProperty Name="date_fin_7araka" ColumnName="date_fin_7araka" />
+          <ScalarProperty Name="employ_id" ColumnName="employ_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doc_displineSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.doc_displine)">
+        <MappingFragment StoreEntitySet="doc_displineSet">
+          <ScalarProperty Name="id_displine" ColumnName="id_displine" />
+          <ScalarProperty Name="titre" ColumnName="titre" />
+          <ScalarProperty Name="n_displine" ColumnName="n_displine" />
+          <ScalarProperty Name="hokem_9adaii" ColumnName="hokem_9adaii" />
+          <ScalarProperty Name="date_7okem" ColumnName="date_7okem" />
+          <ScalarProperty Name="date_arrete" ColumnName="date_arrete" />
+          <ScalarProperty Name="employ_id" ColumnName="employ_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doc_vacane_plusSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.doc_vacane_plus)">
+        <MappingFragment StoreEntitySet="doc_vacane_plusSet">
+          <ScalarProperty Name="id_vac_plus" ColumnName="id_vac_plus" />
+          <ScalarProperty Name="titre_vacplus" ColumnName="titre_vacplus" />
+          <ScalarProperty Name="date_out_vacpus" ColumnName="date_out_vacpus" />
+          <ScalarProperty Name="date_in_vacplus" ColumnName="date_in_vacplus" />
+          <ScalarProperty Name="employ_id" ColumnName="employ_id" />
+          <ScalarProperty Name="nbr_day_vac" ColumnName="nbr_day_vac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doc_morasalt_idariyaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.doc_morasalt_idariya)">
+        <MappingFragment StoreEntitySet="doc_morasalt_idariyaSet">
+          <ScalarProperty Name="id_morasalt" ColumnName="id_morasalt" />
+          <ScalarProperty Name="titre_morasala" ColumnName="titre_morasala" />
+          <ScalarProperty Name="employ_id" ColumnName="employ_id" />
+          <ScalarProperty Name="n_morasalt" ColumnName="n_morasalt" />
+          <ScalarProperty Name="date_morasalt" ColumnName="date_morasalt" />
+          <ScalarProperty Name="scan_doc_morsalt" ColumnName="scan_doc_morsalt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="brancheSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.branche)">
+        <MappingFragment StoreEntitySet="brancheSet">
+          <ScalarProperty Name="id_branche" ColumnName="id_branche" />
+          <ScalarProperty Name="nom_branche" ColumnName="nom_branche" />
+          <ScalarProperty Name="nom_corp" ColumnName="nom_corp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doc2_chngmt_darajaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.doc2_chngmt_daraja)">
+        <MappingFragment StoreEntitySet="doc2_chngmt_darajaSet">
+          <ScalarProperty Name="id_chngmnt_daraja" ColumnName="id_chngmnt_daraja" />
+          <ScalarProperty Name="period_daraja" ColumnName="period_daraja" />
+          <ScalarProperty Name="valeur_daraja" ColumnName="valeur_daraja" />
+          <ScalarProperty Name="date_daraja" ColumnName="date_daraja" />
+          <ScalarProperty Name="employ_id" ColumnName="employ_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doc2_chngmnt_delgationSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.doc2_chngmnt_delgation)">
+        <MappingFragment StoreEntitySet="doc2_chngmnt_delgationSet">
+          <ScalarProperty Name="id_chngmnt_delegation" ColumnName="id_chngmnt_delegation" />
+          <ScalarProperty Name="n_delegation" ColumnName="n_delegation" />
+          <ScalarProperty Name="date_start_delegation" ColumnName="date_start_delegation" />
+          <ScalarProperty Name="date_fin_delegation" ColumnName="date_fin_delegation" />
+          <ScalarProperty Name="type_delegation" ColumnName="type_delegation" />
+          <ScalarProperty Name="employ_id" ColumnName="employ_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doc2_chngmnt_posteSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.doc2_chngmnt_poste)">
+        <MappingFragment StoreEntitySet="doc2_chngmnt_posteSet">
+          <ScalarProperty Name="id_chngmnt_poste" ColumnName="id_chngmnt_poste" />
+          <ScalarProperty Name="n_chngmnt_poste" ColumnName="n_chngmnt_poste" />
+          <ScalarProperty Name="new_nomination_poste" ColumnName="new_nomination_poste" />
+          <ScalarProperty Name="date_start_nomination" ColumnName="date_start_nomination" />
+          <ScalarProperty Name="date_fin_nomination" ColumnName="date_fin_nomination" />
+          <ScalarProperty Name="employ_id" ColumnName="employ_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doc2_charge_poste">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.doc2_charge_poste)">
+        <MappingFragment StoreEntitySet="doc2_charge_poste">
+          <ScalarProperty Name="id_charge" ColumnName="id_charge" />
+          <ScalarProperty Name="n_9arar_charge" ColumnName="n_9arar_charge" />
+          <ScalarProperty Name="date_start_charge" ColumnName="date_start_charge" />
+          <ScalarProperty Name="date_fin_charge" ColumnName="date_fin_charge" />
+          <ScalarProperty Name="employ_id" ColumnName="employ_id" />
+          <ScalarProperty Name="apc_annex_catgr_id_apc_annex" ColumnName="apc_annex_catgr_id_apc_annex" />
+          <ScalarProperty Name="apc_annex_catgr_detail_id_annex_detail" ColumnName="apc_annex_catgr_detail_id_annex_detail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="apc_annex_catgr">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.apc_annex_catgr)">
+        <MappingFragment StoreEntitySet="apc_annex_catgr">
+          <ScalarProperty Name="id_apc_annex" ColumnName="id_apc_annex" />
+          <ScalarProperty Name="nom_apc_annex" ColumnName="nom_apc_annex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="apc_annex_catgr_detail">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.apc_annex_catgr_detail)">
+        <MappingFragment StoreEntitySet="apc_annex_catgr_detail">
+          <ScalarProperty Name="id_annex_detail" ColumnName="id_annex_detail" />
+          <ScalarProperty Name="nom_annex_detail" ColumnName="nom_annex_detail" />
+          <ScalarProperty Name="apc_annex_catgr_id_apc_annex" ColumnName="apc_annex_catgr_id_apc_annex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logins">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.login)">
+        <MappingFragment StoreEntitySet="logins">
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="permision_login" ColumnName="permision_login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lieu_nominaiton">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.lieu_nominaiton)">
+        <MappingFragment StoreEntitySet="lieu_nominaiton">
+          <ScalarProperty Name="id_lieu_nomination" ColumnName="id_lieu_nomination" />
+          <ScalarProperty Name="date_change_lieu_nomination" ColumnName="date_change_lieu_nomination" />
+          <ScalarProperty Name="employ_id" ColumnName="employ_id" />
+          <ScalarProperty Name="apc_annex_catgr_id_apc_annex" ColumnName="apc_annex_catgr_id_apc_annex" />
+          <ScalarProperty Name="apc_annex_catgr_detail_id_annex_detail" ColumnName="apc_annex_catgr_detail_id_annex_detail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="True" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

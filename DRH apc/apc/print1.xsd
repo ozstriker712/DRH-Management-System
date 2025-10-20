@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="print1" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=.\SQLSERVER;Initial Catalog=db1;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="Connection" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="employSetAdapter" GeneratorDataComponentClassName="employSetAdapter" Name="employSet" UserDataComponentName="employSetAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Connection" DbObjectName="db1.dbo.employSet" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, nom_ar, prenom_ar, nom_fr, prenom_fr, sex, date_n, lieu_n, adresse, photo, date_install, rank_orgnl, n_ccp, n_cnas, situation_fml, id_vacance, catgr, nbr_children, service_nationale, date_out_work, etat_emply, rotba_id_rotba, branche_id_branche, date_n_bool, date_n_prisime, prenom_pere, apc_annex_catgr_id_apc_annex, apc_annex_catgr_detail_id_annex_detail, diplome FROM dbo.employSet</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="nom_ar" DataSetColumn="nom_ar" />
+              <Mapping SourceColumn="prenom_ar" DataSetColumn="prenom_ar" />
+              <Mapping SourceColumn="nom_fr" DataSetColumn="nom_fr" />
+              <Mapping SourceColumn="prenom_fr" DataSetColumn="prenom_fr" />
+              <Mapping SourceColumn="sex" DataSetColumn="sex" />
+              <Mapping SourceColumn="date_n" DataSetColumn="date_n" />
+              <Mapping SourceColumn="lieu_n" DataSetColumn="lieu_n" />
+              <Mapping SourceColumn="adresse" DataSetColumn="adresse" />
+              <Mapping SourceColumn="photo" DataSetColumn="photo" />
+              <Mapping SourceColumn="date_install" DataSetColumn="date_install" />
+              <Mapping SourceColumn="rank_orgnl" DataSetColumn="rank_orgnl" />
+              <Mapping SourceColumn="n_ccp" DataSetColumn="n_ccp" />
+              <Mapping SourceColumn="n_cnas" DataSetColumn="n_cnas" />
+              <Mapping SourceColumn="situation_fml" DataSetColumn="situation_fml" />
+              <Mapping SourceColumn="id_vacance" DataSetColumn="id_vacance" />
+              <Mapping SourceColumn="catgr" DataSetColumn="catgr" />
+              <Mapping SourceColumn="nbr_children" DataSetColumn="nbr_children" />
+              <Mapping SourceColumn="service_nationale" DataSetColumn="service_nationale" />
+              <Mapping SourceColumn="date_out_work" DataSetColumn="date_out_work" />
+              <Mapping SourceColumn="etat_emply" DataSetColumn="etat_emply" />
+              <Mapping SourceColumn="rotba_id_rotba" DataSetColumn="rotba_id_rotba" />
+              <Mapping SourceColumn="branche_id_branche" DataSetColumn="branche_id_branche" />
+              <Mapping SourceColumn="date_n_bool" DataSetColumn="date_n_bool" />
+              <Mapping SourceColumn="date_n_prisime" DataSetColumn="date_n_prisime" />
+              <Mapping SourceColumn="prenom_pere" DataSetColumn="prenom_pere" />
+              <Mapping SourceColumn="apc_annex_catgr_id_apc_annex" DataSetColumn="apc_annex_catgr_id_apc_annex" />
+              <Mapping SourceColumn="apc_annex_catgr_detail_id_annex_detail" DataSetColumn="apc_annex_catgr_detail_id_annex_detail" />
+              <Mapping SourceColumn="diplome" DataSetColumn="diplome" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Connection" DbObjectName="db1.dbo.employSet" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillOnlyEmployéWithCharge" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillOnlyEmployéWithCharge" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillOnlyEmployéWithCharge">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        id, nom_ar, prenom_ar, nom_fr, prenom_fr, sex, date_n, lieu_n, adresse, photo, date_install, rank_orgnl, n_ccp, n_cnas, situation_fml, id_vacance, catgr, 
+                         nbr_children, service_nationale, date_out_work, etat_emply, rotba_id_rotba, branche_id_branche, date_n_bool, date_n_prisime, prenom_pere, 
+                         apc_annex_catgr_id_apc_annex, apc_annex_catgr_detail_id_annex_detail, diplome
+FROM            employSet
+WHERE        (id IN
+                             (SELECT DISTINCT employ_id
+                               FROM            doc2_charge_poste))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="doc2_charge_posteTableAdapter" GeneratorDataComponentClassName="doc2_charge_posteTableAdapter" Name="doc2_charge_poste" UserDataComponentName="doc2_charge_posteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Connection" DbObjectName="db1.dbo.doc2_charge_poste" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[doc2_charge_poste] WHERE (([id_charge] = @Original_id_charge) AND ([n_9arar_charge] = @Original_n_9arar_charge) AND ([date_start_charge] = @Original_date_start_charge) AND ((@IsNull_date_fin_charge = 1 AND [date_fin_charge] IS NULL) OR ([date_fin_charge] = @Original_date_fin_charge)) AND ([employ_id] = @Original_employ_id) AND ([apc_annex_catgr_id_apc_annex] = @Original_apc_annex_catgr_id_apc_annex) AND ([apc_annex_catgr_detail_id_annex_detail] = @Original_apc_annex_catgr_detail_id_annex_detail))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_charge" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_charge" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_n_9arar_charge" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="n_9arar_charge" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_date_start_charge" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="date_start_charge" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_date_fin_charge" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="date_fin_charge" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_date_fin_charge" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="date_fin_charge" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_employ_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="employ_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_apc_annex_catgr_id_apc_annex" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="apc_annex_catgr_id_apc_annex" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_apc_annex_catgr_detail_id_annex_detail" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="apc_annex_catgr_detail_id_annex_detail" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[doc2_charge_poste] ([n_9arar_charge], [date_start_charge], [date_fin_charge], [employ_id], [apc_annex_catgr_id_apc_annex], [apc_annex_catgr_detail_id_annex_detail]) VALUES (@n_9arar_charge, @date_start_charge, @date_fin_charge, @employ_id, @apc_annex_catgr_id_apc_annex, @apc_annex_catgr_detail_id_annex_detail);
+SELECT id_charge, n_9arar_charge, date_start_charge, date_fin_charge, employ_id, apc_annex_catgr_id_apc_annex, apc_annex_catgr_detail_id_annex_detail FROM doc2_charge_poste WHERE (id_charge = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@n_9arar_charge" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="n_9arar_charge" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@date_start_charge" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="date_start_charge" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@date_fin_charge" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="date_fin_charge" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@employ_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="employ_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@apc_annex_catgr_id_apc_annex" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="apc_annex_catgr_id_apc_annex" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@apc_annex_catgr_detail_id_annex_detail" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="apc_annex_catgr_detail_id_annex_detail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_charge, n_9arar_charge, date_start_charge, date_fin_charge, employ_id, apc_annex_catgr_id_apc_annex, apc_annex_catgr_detail_id_annex_detail FROM dbo.doc2_charge_poste</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[doc2_charge_poste] SET [n_9arar_charge] = @n_9arar_charge, [date_start_charge] = @date_start_charge, [date_fin_charge] = @date_fin_charge, [employ_id] = @employ_id, [apc_annex_catgr_id_apc_annex] = @apc_annex_catgr_id_apc_annex, [apc_annex_catgr_detail_id_annex_detail] = @apc_annex_catgr_detail_id_annex_detail WHERE (([id_charge] = @Original_id_charge) AND ([n_9arar_charge] = @Original_n_9arar_charge) AND ([date_start_charge] = @Original_date_start_charge) AND ((@IsNull_date_fin_charge = 1 AND [date_fin_charge] IS NULL) OR ([date_fin_charge] = @Original_date_fin_charge)) AND ([employ_id] = @Original_employ_id) AND ([apc_annex_catgr_id_apc_annex] = @Original_apc_annex_catgr_id_apc_annex) AND ([apc_annex_catgr_detail_id_annex_detail] = @Original_apc_annex_catgr_detail_id_annex_detail));
+SELECT id_charge, n_9arar_charge, date_start_charge, date_fin_charge, employ_id, apc_annex_catgr_id_apc_annex, apc_annex_catgr_detail_id_annex_detail FROM doc2_charge_poste WHERE (id_charge = @id_charge)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@n_9arar_charge" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="n_9arar_charge" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@date_start_charge" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="date_start_charge" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@date_fin_charge" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="date_fin_charge" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@employ_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="employ_id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@apc_annex_catgr_id_apc_annex" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="apc_annex_catgr_id_apc_annex" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@apc_annex_catgr_detail_id_annex_detail" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="apc_annex_catgr_detail_id_annex_detail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id_charge" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_charge" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_n_9arar_charge" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="n_9arar_charge" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_date_start_charge" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="date_start_charge" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_date_fin_charge" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="date_fin_charge" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_date_fin_charge" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="date_fin_charge" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_employ_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="employ_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_apc_annex_catgr_id_apc_annex" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="apc_annex_catgr_id_apc_annex" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_apc_annex_catgr_detail_id_annex_detail" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="apc_annex_catgr_detail_id_annex_detail" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="id_charge" ColumnName="id_charge" DataSourceName="db1.dbo.doc2_charge_poste" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_charge" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id_charge" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_charge" DataSetColumn="id_charge" />
+              <Mapping SourceColumn="n_9arar_charge" DataSetColumn="n_9arar_charge" />
+              <Mapping SourceColumn="date_start_charge" DataSetColumn="date_start_charge" />
+              <Mapping SourceColumn="date_fin_charge" DataSetColumn="date_fin_charge" />
+              <Mapping SourceColumn="employ_id" DataSetColumn="employ_id" />
+              <Mapping SourceColumn="apc_annex_catgr_id_apc_annex" DataSetColumn="apc_annex_catgr_id_apc_annex" />
+              <Mapping SourceColumn="apc_annex_catgr_detail_id_annex_detail" DataSetColumn="apc_annex_catgr_detail_id_annex_detail" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="print1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="print1" msprop:Generator_UserDSName="print1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="employSet" msprop:Generator_TableClassName="employSetDataTable" msprop:Generator_TableVarName="tableemploySet" msprop:Generator_RowChangedName="employSetRowChanged" msprop:Generator_TablePropName="employSet" msprop:Generator_RowDeletingName="employSetRowDeleting" msprop:Generator_RowChangingName="employSetRowChanging" msprop:Generator_RowEvHandlerName="employSetRowChangeEventHandler" msprop:Generator_RowDeletedName="employSetRowDeleted" msprop:Generator_RowClassName="employSetRow" msprop:Generator_UserTableName="employSet" msprop:Generator_RowEvArgName="employSetRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="nom_ar" msprop:Generator_ColumnVarNameInTable="columnnom_ar" msprop:Generator_ColumnPropNameInRow="nom_ar" msprop:Generator_ColumnPropNameInTable="nom_arColumn" msprop:Generator_UserColumnName="nom_ar">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prenom_ar" msprop:Generator_ColumnVarNameInTable="columnprenom_ar" msprop:Generator_ColumnPropNameInRow="prenom_ar" msprop:Generator_ColumnPropNameInTable="prenom_arColumn" msprop:Generator_UserColumnName="prenom_ar">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nom_fr" msprop:Generator_ColumnVarNameInTable="columnnom_fr" msprop:Generator_ColumnPropNameInRow="nom_fr" msprop:Generator_ColumnPropNameInTable="nom_frColumn" msprop:Generator_UserColumnName="nom_fr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prenom_fr" msprop:Generator_ColumnVarNameInTable="columnprenom_fr" msprop:Generator_ColumnPropNameInRow="prenom_fr" msprop:Generator_ColumnPropNameInTable="prenom_frColumn" msprop:Generator_UserColumnName="prenom_fr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sex" msprop:Generator_ColumnVarNameInTable="columnsex" msprop:Generator_ColumnPropNameInRow="sex" msprop:Generator_ColumnPropNameInTable="sexColumn" msprop:Generator_UserColumnName="sex">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_n" msprop:Generator_ColumnVarNameInTable="columndate_n" msprop:Generator_ColumnPropNameInRow="date_n" msprop:Generator_ColumnPropNameInTable="date_nColumn" msprop:Generator_UserColumnName="date_n" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="lieu_n" msprop:Generator_ColumnVarNameInTable="columnlieu_n" msprop:Generator_ColumnPropNameInRow="lieu_n" msprop:Generator_ColumnPropNameInTable="lieu_nColumn" msprop:Generator_UserColumnName="lieu_n">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="adresse" msprop:Generator_ColumnVarNameInTable="columnadresse" msprop:Generator_ColumnPropNameInRow="adresse" msprop:Generator_ColumnPropNameInTable="adresseColumn" msprop:Generator_UserColumnName="adresse">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="photo" msprop:Generator_ColumnVarNameInTable="columnphoto" msprop:Generator_ColumnPropNameInRow="photo" msprop:Generator_ColumnPropNameInTable="photoColumn" msprop:Generator_UserColumnName="photo" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="date_install" msprop:Generator_ColumnVarNameInTable="columndate_install" msprop:Generator_ColumnPropNameInRow="date_install" msprop:Generator_ColumnPropNameInTable="date_installColumn" msprop:Generator_UserColumnName="date_install" type="xs:dateTime" />
+              <xs:element name="rank_orgnl" msprop:Generator_ColumnVarNameInTable="columnrank_orgnl" msprop:Generator_ColumnPropNameInRow="rank_orgnl" msprop:Generator_ColumnPropNameInTable="rank_orgnlColumn" msprop:Generator_UserColumnName="rank_orgnl">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="n_ccp" msprop:Generator_ColumnVarNameInTable="columnn_ccp" msprop:Generator_ColumnPropNameInRow="n_ccp" msprop:Generator_ColumnPropNameInTable="n_ccpColumn" msprop:Generator_UserColumnName="n_ccp">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="n_cnas" msprop:Generator_ColumnVarNameInTable="columnn_cnas" msprop:Generator_ColumnPropNameInRow="n_cnas" msprop:Generator_ColumnPropNameInTable="n_cnasColumn" msprop:Generator_UserColumnName="n_cnas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="situation_fml" msprop:Generator_ColumnVarNameInTable="columnsituation_fml" msprop:Generator_ColumnPropNameInRow="situation_fml" msprop:Generator_ColumnPropNameInTable="situation_fmlColumn" msprop:Generator_UserColumnName="situation_fml">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_vacance" msprop:Generator_ColumnVarNameInTable="columnid_vacance" msprop:Generator_ColumnPropNameInRow="id_vacance" msprop:Generator_ColumnPropNameInTable="id_vacanceColumn" msprop:Generator_UserColumnName="id_vacance" type="xs:int" />
+              <xs:element name="catgr" msprop:Generator_ColumnVarNameInTable="columncatgr" msprop:Generator_ColumnPropNameInRow="catgr" msprop:Generator_ColumnPropNameInTable="catgrColumn" msprop:Generator_UserColumnName="catgr">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nbr_children" msprop:Generator_ColumnVarNameInTable="columnnbr_children" msprop:Generator_ColumnPropNameInRow="nbr_children" msprop:Generator_ColumnPropNameInTable="nbr_childrenColumn" msprop:Generator_UserColumnName="nbr_children" type="xs:int" minOccurs="0" />
+              <xs:element name="service_nationale" msprop:Generator_ColumnVarNameInTable="columnservice_nationale" msprop:Generator_ColumnPropNameInRow="service_nationale" msprop:Generator_ColumnPropNameInTable="service_nationaleColumn" msprop:Generator_UserColumnName="service_nationale" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_out_work" msprop:Generator_ColumnVarNameInTable="columndate_out_work" msprop:Generator_ColumnPropNameInRow="date_out_work" msprop:Generator_ColumnPropNameInTable="date_out_workColumn" msprop:Generator_UserColumnName="date_out_work" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="etat_emply" msprop:Generator_ColumnVarNameInTable="columnetat_emply" msprop:Generator_ColumnPropNameInRow="etat_emply" msprop:Generator_ColumnPropNameInTable="etat_emplyColumn" msprop:Generator_UserColumnName="etat_emply">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rotba_id_rotba" msprop:Generator_ColumnVarNameInTable="columnrotba_id_rotba" msprop:Generator_ColumnPropNameInRow="rotba_id_rotba" msprop:Generator_ColumnPropNameInTable="rotba_id_rotbaColumn" msprop:Generator_UserColumnName="rotba_id_rotba" type="xs:int" />
+              <xs:element name="branche_id_branche" msprop:Generator_ColumnVarNameInTable="columnbranche_id_branche" msprop:Generator_ColumnPropNameInRow="branche_id_branche" msprop:Generator_ColumnPropNameInTable="branche_id_brancheColumn" msprop:Generator_UserColumnName="branche_id_branche" type="xs:int" />
+              <xs:element name="date_n_bool" msprop:Generator_ColumnVarNameInTable="columndate_n_bool" msprop:Generator_ColumnPropNameInRow="date_n_bool" msprop:Generator_ColumnPropNameInTable="date_n_boolColumn" msprop:Generator_UserColumnName="date_n_bool" type="xs:boolean" />
+              <xs:element name="date_n_prisime" msprop:Generator_ColumnVarNameInTable="columndate_n_prisime" msprop:Generator_ColumnPropNameInRow="date_n_prisime" msprop:Generator_ColumnPropNameInTable="date_n_prisimeColumn" msprop:Generator_UserColumnName="date_n_prisime" type="xs:int" minOccurs="0" />
+              <xs:element name="prenom_pere" msprop:Generator_ColumnVarNameInTable="columnprenom_pere" msprop:Generator_ColumnPropNameInRow="prenom_pere" msprop:Generator_ColumnPropNameInTable="prenom_pereColumn" msprop:Generator_UserColumnName="prenom_pere" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apc_annex_catgr_id_apc_annex" msprop:Generator_ColumnVarNameInTable="columnapc_annex_catgr_id_apc_annex" msprop:Generator_ColumnPropNameInRow="apc_annex_catgr_id_apc_annex" msprop:Generator_ColumnPropNameInTable="apc_annex_catgr_id_apc_annexColumn" msprop:Generator_UserColumnName="apc_annex_catgr_id_apc_annex" type="xs:int" />
+              <xs:element name="apc_annex_catgr_detail_id_annex_detail" msprop:Generator_ColumnVarNameInTable="columnapc_annex_catgr_detail_id_annex_detail" msprop:Generator_ColumnPropNameInRow="apc_annex_catgr_detail_id_annex_detail" msprop:Generator_ColumnPropNameInTable="apc_annex_catgr_detail_id_annex_detailColumn" msprop:Generator_UserColumnName="apc_annex_catgr_detail_id_annex_detail" type="xs:int" />
+              <xs:element name="diplome" msprop:Generator_ColumnVarNameInTable="columndiplome" msprop:Generator_ColumnPropNameInRow="diplome" msprop:Generator_ColumnPropNameInTable="diplomeColumn" msprop:Generator_UserColumnName="diplome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="doc2_charge_poste" msprop:Generator_TableClassName="doc2_charge_posteDataTable" msprop:Generator_TableVarName="tabledoc2_charge_poste" msprop:Generator_RowChangedName="doc2_charge_posteRowChanged" msprop:Generator_TablePropName="doc2_charge_poste" msprop:Generator_RowDeletingName="doc2_charge_posteRowDeleting" msprop:Generator_RowChangingName="doc2_charge_posteRowChanging" msprop:Generator_RowEvHandlerName="doc2_charge_posteRowChangeEventHandler" msprop:Generator_RowDeletedName="doc2_charge_posteRowDeleted" msprop:Generator_RowClassName="doc2_charge_posteRow" msprop:Generator_UserTableName="doc2_charge_poste" msprop:Generator_RowEvArgName="doc2_charge_posteRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_charge" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_charge" msprop:Generator_ColumnPropNameInRow="id_charge" msprop:Generator_ColumnPropNameInTable="id_chargeColumn" msprop:Generator_UserColumnName="id_charge" type="xs:int" />
+              <xs:element name="n_9arar_charge" msprop:Generator_ColumnVarNameInTable="columnn_9arar_charge" msprop:Generator_ColumnPropNameInRow="n_9arar_charge" msprop:Generator_ColumnPropNameInTable="n_9arar_chargeColumn" msprop:Generator_UserColumnName="n_9arar_charge" type="xs:int" />
+              <xs:element name="date_start_charge" msprop:Generator_ColumnVarNameInTable="columndate_start_charge" msprop:Generator_ColumnPropNameInRow="date_start_charge" msprop:Generator_ColumnPropNameInTable="date_start_chargeColumn" msprop:Generator_UserColumnName="date_start_charge" type="xs:dateTime" />
+              <xs:element name="date_fin_charge" msprop:Generator_ColumnVarNameInTable="columndate_fin_charge" msprop:Generator_ColumnPropNameInRow="date_fin_charge" msprop:Generator_ColumnPropNameInTable="date_fin_chargeColumn" msprop:Generator_UserColumnName="date_fin_charge" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="employ_id" msprop:Generator_ColumnVarNameInTable="columnemploy_id" msprop:Generator_ColumnPropNameInRow="employ_id" msprop:Generator_ColumnPropNameInTable="employ_idColumn" msprop:Generator_UserColumnName="employ_id" type="xs:int" />
+              <xs:element name="apc_annex_catgr_id_apc_annex" msprop:Generator_ColumnVarNameInTable="columnapc_annex_catgr_id_apc_annex" msprop:Generator_ColumnPropNameInRow="apc_annex_catgr_id_apc_annex" msprop:Generator_ColumnPropNameInTable="apc_annex_catgr_id_apc_annexColumn" msprop:Generator_UserColumnName="apc_annex_catgr_id_apc_annex" type="xs:int" />
+              <xs:element name="apc_annex_catgr_detail_id_annex_detail" msprop:Generator_ColumnVarNameInTable="columnapc_annex_catgr_detail_id_annex_detail" msprop:Generator_ColumnPropNameInRow="apc_annex_catgr_detail_id_annex_detail" msprop:Generator_ColumnPropNameInTable="apc_annex_catgr_detail_id_annex_detailColumn" msprop:Generator_UserColumnName="apc_annex_catgr_detail_id_annex_detail" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//employSet" />
+      <xs:field xpath="id" />
+    </xs:unique>
+    <xs:unique name="doc2_charge_poste_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//doc2_charge_poste" />
+      <xs:field xpath="id_charge" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_employdoc2_charge_poste" msdata:parent="employSet" msdata:child="doc2_charge_poste" msdata:parentkey="id" msdata:childkey="employ_id" msprop:Generator_UserChildTable="doc2_charge_poste" msprop:Generator_ChildPropName="Getdoc2_charge_posteRows" msprop:Generator_UserRelationName="FK_employdoc2_charge_poste" msprop:Generator_RelationVarName="relationFK_employdoc2_charge_poste" msprop:Generator_UserParentTable="employSet" msprop:Generator_ParentPropName="employSetRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
