@@ -1,6 +1,6 @@
 # DRH-Management-System
 A complete Human Resources Management System (DRH) developed with C# (.NET), Entity Framework 6, SQL Server, and DevExpress.
-This system manages the full administrative record of each employee, including all documents throughout their career — such as absences, leaves, and HR actions — in full compliance with the Algerian Civil Service Law.
+This system manages the full administrative record of each employee, including all documents throughout their career — such as absences, leaves, and HR actions — in full compliance with the Public Service Human Resources Management.
 
 It provides complete control over employee data, administrative documents, and staff statistics, with options to export lists to Excel or Word and to customize the application’s theme and layout.
 The program also includes user permissions, advanced search, statistics, and reporting tools for efficient HR management.
@@ -23,7 +23,7 @@ Statistics and reports for HR performance tracking.
 
 Customizable interface and themes.
 
-Fully compliant with the Algerian Civil Service Law.
+Fully compliant with the Public Service Human Resources Management.
 
 <img width="724" height="835" alt="1" src="https://github.com/user-attachments/assets/954eb44a-a9a1-4b69-83b4-da53d85b183e" />
 <img width="1363" height="765" alt="2" src="https://github.com/user-attachments/assets/df5c7285-08cc-4230-b77e-db322a724cab" />
